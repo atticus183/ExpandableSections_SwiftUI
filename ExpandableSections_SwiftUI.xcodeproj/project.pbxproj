@@ -11,6 +11,8 @@
 		120461E2265C765200548AA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120461E1265C765200548AA9 /* ContentView.swift */; };
 		120461E4265C765400548AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120461E3265C765400548AA9 /* Assets.xcassets */; };
 		120461E7265C765400548AA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120461E6265C765400548AA9 /* Preview Assets.xcassets */; };
+		120461EF265C76CD00548AA9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120461EE265C76CD00548AA9 /* Model.swift */; };
+		120461F1265C77B300548AA9 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120461F0265C77B300548AA9 /* CategoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		120461E3265C765400548AA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		120461E6265C765400548AA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		120461E8265C765400548AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		120461EE265C76CD00548AA9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		120461F0265C77B300548AA9 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				120461DF265C765200548AA9 /* ExpandableSections_SwiftUIApp.swift */,
 				120461E1265C765200548AA9 /* ContentView.swift */,
+				120461F0265C77B300548AA9 /* CategoryViewModel.swift */,
+				120461EE265C76CD00548AA9 /* Model.swift */,
 				120461E3265C765400548AA9 /* Assets.xcassets */,
 				120461E8265C765400548AA9 /* Info.plist */,
 				120461E5265C765400548AA9 /* Preview Content */,
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120461F1265C77B300548AA9 /* CategoryViewModel.swift in Sources */,
+				120461EF265C76CD00548AA9 /* Model.swift in Sources */,
 				120461E2265C765200548AA9 /* ContentView.swift in Sources */,
 				120461E0265C765200548AA9 /* ExpandableSections_SwiftUIApp.swift in Sources */,
 			);

@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var categoryViewModel = CategoryViewModel()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(categoryViewModel.categories, children: \.sortedSubcategories, rowContent: { row in
+                Label(row.name, systemImage: categoryViewModel.icons[row.name] ?? "")
+                    .font(.headline)
+                    .accentColor(.orange)
+            })
+            .toolbar(content: {
+                Button(action: {
+                    let randomIndex = Int.random(in: 0...2)
+                    categoryViewModel.categories[randomIndex].subcategories?.append(Category(name: "NEW"))
+                }, label: {
+                    Image(systemName: "plus")
+                })
+            })
+            .navigationTitle("Categories")
+        }
     }
 }
 
