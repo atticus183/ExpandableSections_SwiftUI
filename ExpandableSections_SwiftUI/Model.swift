@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category: Hashable, Identifiable {
+struct Category: Identifiable {
     let id = UUID().uuidString
     var name: String
     var subcategories: [Category]?   //this type MUST be the same as the parent

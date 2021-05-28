@@ -14,27 +14,27 @@ to add a iSelected property on the Category type itself and toggle the bool when
 
 struct ContentView: View {
     @StateObject private var categoryViewModel = CategoryViewModel()
-    @State private var selectedCategories: Set<Category> = []
+    @State private var selectedCategories: Set<String> = []
 
     var body: some View {
         NavigationView {
             List(categoryViewModel.categories, children: \.sortedSubcategories, rowContent: { row in
-                Image(systemName: selectedCategories.contains(row) ? "checkmark.square.fill" : "square")
+                Image(systemName: selectedCategories.contains(row.id) ? "checkmark.square.fill" : "square")
                     .resizable()
-                    .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(.orange)
+                    .frame(width: 20, height: 20, alignment: .center)
+                    .foregroundColor(Color(UIColor.systemPink))
                 Label(row.name, systemImage: categoryViewModel.icons[row.name] ?? "")
                     .frame(width: UIScreen.main.bounds.width - 90, height: 30, alignment: .leading)
                     .background(Color.init(.systemGray5))   //just to show how far the label stretches
                     .foregroundColor(.blue)
                     .font(.headline)
                     .onTapGesture {
-                        if selectedCategories.contains(row) {
+                        if selectedCategories.contains(row.id) {
                             print("\(row.name) removed")
-                            selectedCategories.remove(row)
+                            selectedCategories.remove(row.id)
                         } else {
                             print("\(row.name) added")
-                            selectedCategories.insert(row)
+                            selectedCategories.insert(row.id)
                         }
                     }
             })
